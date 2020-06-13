@@ -1,0 +1,24 @@
+-- 클래스의 상속 --
+
+fun main(){
+    var a = Animal("puppy",5,"Dog")
+    var b = Dog("puppy",5) // 위와 완전히 같다.
+    a.introduce()
+    b.introduce()
+    
+    b.bark()
+}
+// 코틀린은 오픈 금지가 default이다(상속 금지) -> class 앞에 open을 붙인다
+open class Animal (var name : String, var age:Int, var type:String){
+    fun introduce(){
+        println("I'm ${age} year old ${type} &{name}")
+    }
+// 서브클래스는 수퍼 클래스에 존재하는 속성과 '같은 이름'의 속성을 가질 수 없다
+// 서브클래스를 생성할 때에는 반드시 수퍼클래스의 생성자까지 호출되어야 한다
+}
+
+class Dog(name:String, age:Int) : Animal(name, age, "Dog"){
+    fun bark(){
+        println("bow wow")
+    }
+}

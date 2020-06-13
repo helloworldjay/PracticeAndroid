@@ -1,0 +1,26 @@
+-- 흐름제어와 논리연산자 --
+
+fun main(){
+    // break
+    // continue
+    for(i in 1..10){
+        if (i == 3) continue
+        println(i)
+    }
+    // 고전적 언어에서는 이중 반복문에서 내부 조건이 끝났을 때 외부에서도 종료조건을 따로 달아주어야 했다.
+    for(i in 1..10){
+        for(j in 1..10){
+            if(i==1&&j==3) break // i가 1이고, j가 3일때 종료
+        }
+    }
+    // 코틀린에서는 @ at 기능을 제공한다.
+    loop@for(i in 1..10){
+        for(j in 1..10){
+            if(i==1&&j==3) break@loop // loop가 달린 반복문을 기준으로 바로 break or continue
+            println("i:$i, j : $j") // string 안에 변수를 출력할 때에는 $ 표시를 붙이면 된다.      
+        }
+    }
+    // 논리연산자
+    // && || !
+    // false, true
+}

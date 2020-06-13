@@ -1,0 +1,17 @@
+fun main(){
+    var num : Int = 123
+    var longnum : Long = num.toLong()
+    /*형변환
+    .toInt()
+    .toLong()
+    */
+
+    // 배열 설정하기
+    var arry = arrayOf(1,2,3,4,5)
+    // Null로 초기화된 배열 설정하기
+    var nullArry = arrayOfNulls<Int>(5)
+    nullArry[3] = 3
+    println(arry[0])
+    println(nullArry[0])
+    
+}
