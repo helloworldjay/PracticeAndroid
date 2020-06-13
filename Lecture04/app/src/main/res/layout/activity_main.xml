@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal"
+    android:weightSum="3"
+
+    >
+    <!-- orientation -> vertical 방향설정 옵션-->
+    <!-- weight -> 가중치 설정 수평 전체를 3으로 보고 view의 weight를 1로 보기때문에 1/3 이 된다.-->
+    <!-- dp로 설정한 것이 우선이고 그 뒤에 weight로 채운것이 들어가는 개념-->
+    <!--android:layout_gravity="center"-->
+
+    <View
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#EA3434"
+        />
+
+    <View
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#E8CE22"
+        />
+
+    <View
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#3477EA"
+        />
+</LinearLayout>

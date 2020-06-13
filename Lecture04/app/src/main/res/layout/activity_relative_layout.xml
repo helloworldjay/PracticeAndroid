@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeLayout">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#6C19CA"
+        />
+
+
+    <View
+        android:id="@+id/red_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#E91E63"
+
+        />
+    <View
+        android:id="@+id/blue_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#03A9F4"
+        android:layout_toRightOf="@+id/red_view"
+        />
+
+    <!--relative layout은 View끼리 겹칠 수 있다.-->
+
+</RelativeLayout>
